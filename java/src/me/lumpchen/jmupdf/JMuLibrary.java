@@ -7,6 +7,7 @@ import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.WString;
 
 public interface JMuLibrary extends Library {
 
@@ -29,12 +30,20 @@ public interface JMuLibrary extends Library {
 		public static class ByValue extends DocumentInfo implements Structure.ByValue {
 		}
 		
-		public String creator;
+		public WString author;
+		public WString creator;
+		public WString creation_date;
+		public WString producer;
+		public WString title;
 		
 		@Override
 		protected List<String> getFieldOrder() {
-			return Arrays.asList(new String[] { 
-					"creator"
+			return Arrays.asList(new String[] {
+					"author",
+					"creator",
+					"creation_date",
+					"producer",
+					"title"
 					});
 		}
 	}

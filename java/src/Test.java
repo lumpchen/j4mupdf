@@ -1,3 +1,4 @@
+import me.lumpchen.jmupdf.JMuPDF;
 import me.lumpchen.jmupdf.JMuLibrary.DocumentInfo;
 
 public class Test {
@@ -11,7 +12,11 @@ public class Test {
 		
 		DocumentInfo info = mupdf.getDocumentInfo();
 		if (info != null) {
-			System.out.println(info.creator);	
+			System.out.println(info.author);
+			System.out.println(info.creator);
+			System.out.println(info.creation_date);
+			System.out.println(info.producer);
+			System.out.println(info.title);
 		}
 	}
 }

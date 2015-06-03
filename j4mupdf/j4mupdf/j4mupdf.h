@@ -10,7 +10,11 @@ extern "C" {
 
 struct DocumentInfo
 {
-	char* creator;
+	wchar_t* author;
+	wchar_t* creator;
+	wchar_t* creation_date;
+	wchar_t* producer;
+	wchar_t* title;
 };
 
 J_MU_EXPORT(fz_context*) j_mu_init_Context();

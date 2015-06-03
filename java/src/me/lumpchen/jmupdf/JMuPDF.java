@@ -1,4 +1,5 @@
-import me.lumpchen.jmupdf.JMuLibrary;
+package me.lumpchen.jmupdf;
+
 import me.lumpchen.jmupdf.JMuLibrary.DocumentInfo;
 
 import com.sun.jna.Pointer;
